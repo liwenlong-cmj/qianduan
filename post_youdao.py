@@ -1,20 +1,20 @@
 import requests
 
-url="http://fanyi.youdao.com/translate o？smartresult=dict&smartresult=rele"
-form_data={
-  'i': '葵司you',
+url = "http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule"
+from_data = {
+  'i': '我和你',
   'from': 'AUTO',
   'to': 'AUTO',
   'smartresult': 'dict',
   'client': 'fanyideskweb',
-  'salt': '15846844587184',
-  'sign': '46b98940452b704f9b97929473c4b0ef',
-  'ts': '1584684458718',
+  'salt': '15846844488375',
+  'sign': '51a801838d8e15397ff4f501eadf5c1b',
+  'ts': '1584684448837',
   'bv': '0ed2e07b89acaa1301d499442c9fdf79',
   'doctype': 'json',
   'version': '2.1',
   'keyfrom': 'fanyi.web',
-  'action': 'FY_BY_REALTlME'
+  'action': 'FY_BY_REALTlME',
 }
-response=requests.post(url,form_data)
+response = requests.post(url, from_data)
 print(response.text)
