@@ -1,10 +1,18 @@
+import random
 import requests
+import time
 
 url = "http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule"
 
 
 def get_salt():
-  return '15846844488375'
+  s=str(random.randint(0,10))
+  t=get_ts()
+  #print("eandom = ",s)
+  #print("ts= ",t)
+  #print("salt= ",t+s)
+  return t+s
+  #return '15846844488375'
 
 
 def get_sign():
@@ -12,7 +20,6 @@ def get_sign():
 
 
 def get_ts():
-  import time
   ts = time.time()
   ts = str(int(round(ts * 1000)))
   print(ts)
