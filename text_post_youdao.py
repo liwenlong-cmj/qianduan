@@ -1,6 +1,5 @@
 import unittest
 from unittest import mock
-
 from post_youdao import *
 
 class postyoudaotext(unittest.TestCase):
@@ -20,8 +19,8 @@ class postyoudaotext(unittest.TestCase):
         self.assertEqual('15846844488375',get_salt())
 
     def test_get_sign(self):
+        get_sign=mock.Mock(return_value="51a801838d8e15397ff4f501eadf5c1b")
         self.assertEqual('51a801838d8e15397ff4f501eadf5c1b',get_sign())
-
 
 if __name__ == '__main__':
     unittest.main()
