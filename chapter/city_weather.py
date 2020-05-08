@@ -32,7 +32,7 @@ class HeFeng():
 if __name__ == '__main__':
     hefeng=HeFeng()
     codes=hefeng.get_city_code()
-    for i in range(10):
+    for i in range(100):
         print(hefeng.today_weather(codes.__next__()))
     #hefeng.get_weather(codes.__next__())
     #print(codes.__next__())
